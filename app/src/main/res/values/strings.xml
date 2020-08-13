@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Table Reservation</string>
+    <string name="table_num">Table</string>
 </resources>
