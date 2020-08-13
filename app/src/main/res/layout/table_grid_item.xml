@@ -17,7 +17,7 @@
         android:padding="15dp">
 
         <TextView
-            android:id="@+id/table_num"
+            android:id="@+id/table_id"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignStart="@id/table_icon"
@@ -34,7 +34,7 @@
             android:id="@+id/table_icon"
             android:layout_width="100dp"
             android:layout_height="100dp"
-            android:layout_below="@id/table_num"
+            android:layout_below="@id/table_id"
             android:layout_centerInParent="true"
             android:contentDescription="@string/table_num" />
     </RelativeLayout>

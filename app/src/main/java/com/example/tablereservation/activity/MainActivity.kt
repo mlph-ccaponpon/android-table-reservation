@@ -29,14 +29,16 @@ class MainActivity : AppCompatActivity(), AdapterView.OnItemClickListener {
 
     private fun setTableList() : ArrayList<Table> {
         var tableList: ArrayList<Table> = ArrayList()
-        tableList.add(Table(R.drawable.ic_table_1, 1))
-        tableList.add(Table(R.drawable.ic_table_2, 2))
-        tableList.add(Table(R.drawable.ic_table_3, 3))
-        tableList.add(Table(R.drawable.ic_table_4, 4))
+        tableList.add(Table( 1, R.drawable.ic_table_1))
+        tableList.add(Table(2, R.drawable.ic_table_2))
+        tableList.add(Table(3, R.drawable.ic_table_3))
+        tableList.add(Table(4, R.drawable.ic_table_4))
         return tableList
     }
 
     override fun onItemClick(adapterView: AdapterView<*>?, view: View?, position: Int, id: Long) {
-        val customerList: Intent
+        val customerListIntent = Intent(view?.context, CustomerListActivity::class.java)
+        customerListIntent.putExtra("tableId", tableList[position].id)
+        startActivity(customerListIntent)
     }
 }

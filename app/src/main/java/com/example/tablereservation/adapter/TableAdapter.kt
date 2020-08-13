@@ -10,16 +10,16 @@ import com.example.tablereservation.R
 import com.example.tablereservation.model.Table
 
 class TableAdapter(var context: Context, var tableList: ArrayList<Table>) : BaseAdapter() {
-    override fun getView(position: Int, p1: View?, p2: ViewGroup?): View {
-        var view: View = View.inflate(context, R.layout.table_grid_item, null)
-        var tableNum: TextView = view.findViewById(R.id.table_num)
-        var tableIcon: ImageView = view.findViewById(R.id.table_icon)
+    override fun getView(position: Int, view: View?, viewGroup: ViewGroup?): View {
+        var tableView = View.inflate(context, R.layout.table_grid_item, null)
+        var tableId: TextView = tableView.findViewById(R.id.table_id)
+        var tableIcon: ImageView = tableView.findViewById(R.id.table_icon)
         var table: Table = tableList[position]
 
-        tableNum.text = "Table"
+        tableId.text = "Table ${table.id}"
         tableIcon.setImageResource(table.icon!!)
 
-        return view
+        return tableView
     }
 
     override fun getItem(position: Int): Any {
