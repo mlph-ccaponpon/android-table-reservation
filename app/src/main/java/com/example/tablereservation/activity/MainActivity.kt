@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.AdapterView
+import android.widget.Button
 import android.widget.GridView
 import com.example.tablereservation.R
 import com.example.tablereservation.adapter.TableAdapter
@@ -16,10 +17,17 @@ class MainActivity : AppCompatActivity(), AdapterView.OnItemClickListener {
     lateinit var tableAdapter: TableAdapter
     private var tableList: ArrayList<Table> = ArrayList()
 
+    lateinit var addCustomerButton: Button
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        initTableGridView()
+        initOptionButtons()
+    }
+
+    private fun initTableGridView() {
         tableGridView = findViewById(R.id.table_grid_view)
         tableList = setTableList()
         tableAdapter = TableAdapter(applicationContext, tableList)
@@ -38,7 +46,19 @@ class MainActivity : AppCompatActivity(), AdapterView.OnItemClickListener {
 
     override fun onItemClick(adapterView: AdapterView<*>?, view: View?, position: Int, id: Long) {
         val customerListIntent = Intent(view?.context, CustomerListActivity::class.java)
-        customerListIntent.putExtra("tableId", tableList[position].id)
+        customerListIntent.putExtra(Table.TABLE_ID_KEY, tableList[position].id)
         startActivity(customerListIntent)
+    }
+
+    private fun initOptionButtons() {
+        initAddCustomerButton()
+    }
+
+    private fun initAddCustomerButton() {
+        addCustomerButton = findViewById(R.id.add_customer)
+        addCustomerButton.setOnClickListener(View.OnClickListener {
+            val addCustomerIntent = Intent(this, AddCustomerActivity::class.java)
+            startActivity(addCustomerIntent)
+        })
     }
 }

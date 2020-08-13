@@ -3,6 +3,7 @@ package com.example.tablereservation.activity
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.tablereservation.R
+import com.example.tablereservation.model.Table
 
 class CustomerListActivity : AppCompatActivity() {
     private var tableId: Int = 0
@@ -11,8 +12,8 @@ class CustomerListActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_customer_list)
 
-        tableId = intent.getIntExtra("tableId", 0)
-        val navBarTitle = "Table ${tableId}"
+        tableId = intent.getIntExtra(Table.TABLE_ID_KEY, 0)
+        val navBarTitle = getString(R.string.table_id, tableId)
         supportActionBar?.title = navBarTitle
     }
 }

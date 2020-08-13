@@ -16,7 +16,7 @@ class TableAdapter(var context: Context, var tableList: ArrayList<Table>) : Base
         var tableIcon: ImageView = tableView.findViewById(R.id.table_icon)
         var table: Table = tableList[position]
 
-        tableId.text = "Table ${table.id}"
+        tableId.text = context.getString(R.string.table_id, table.id)
         tableIcon.setImageResource(table.icon!!)
 
         return tableView
