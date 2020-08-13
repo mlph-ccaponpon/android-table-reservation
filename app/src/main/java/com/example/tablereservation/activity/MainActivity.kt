@@ -1,16 +1,20 @@
-package com.example.tablereservation
+package com.example.tablereservation.activity
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
+import android.widget.AdapterView
 import android.widget.GridView
+import com.example.tablereservation.R
 import com.example.tablereservation.adapter.TableAdapter
 import com.example.tablereservation.model.Table
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : AppCompatActivity(), AdapterView.OnItemClickListener {
 
-    private var tableGridView: GridView ? = null
-    private var tableList: ArrayList<Table> ? = null
-    private var tableAdapter: TableAdapter ? = null
+    lateinit var tableGridView: GridView
+    lateinit var tableAdapter: TableAdapter
+    private var tableList: ArrayList<Table> = ArrayList()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -18,8 +22,9 @@ class MainActivity : AppCompatActivity() {
 
         tableGridView = findViewById(R.id.table_grid_view)
         tableList = setTableList()
-        tableAdapter = TableAdapter(applicationContext, tableList!!)
-        tableGridView?.adapter = tableAdapter
+        tableAdapter = TableAdapter(applicationContext, tableList)
+        tableGridView.adapter = tableAdapter
+        tableGridView.onItemClickListener = this
     }
 
     private fun setTableList() : ArrayList<Table> {
@@ -29,5 +34,9 @@ class MainActivity : AppCompatActivity() {
         tableList.add(Table(R.drawable.ic_table_3, 3))
         tableList.add(Table(R.drawable.ic_table_4, 4))
         return tableList
+    }
+
+    override fun onItemClick(adapterView: AdapterView<*>?, view: View?, position: Int, id: Long) {
+        val customerList: Intent
     }
 }
