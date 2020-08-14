@@ -1,5 +1,6 @@
 package com.example.tablereservation.activity
 
+import android.annotation.SuppressLint
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -28,20 +29,20 @@ class CustomerListActivity : AppCompatActivity() {
         val navBarTitle = getString(R.string.table_id, tableId)
         supportActionBar?.title = navBarTitle
 
-        customerListView = findViewById(R.id.customer_list)
-        customerListView.layoutManager = LinearLayoutManager(this)
+        appDatabase = AppDatabase.getDatabase(this)
         showCustomerListByTable()
     }
 
+    @SuppressLint("CheckResult")
     private fun showCustomerListByTable(){
         Observable.fromCallable {
-            appDatabase = AppDatabase.getDatabase(this)
             appDatabase.customerDao().getCustomerByTable(tableId)
-        }.doOnNext {
-            customerList ->
-            customerListView.adapter = CustomerAdapter(customerList, this)
         }.subscribeOn(Schedulers.io())
             .observeOn(AndroidSchedulers.mainThread())
-            .subscribe()
+            .subscribe{ customerList ->
+                customerListView = findViewById(R.id.customer_list)
+                customerListView.layoutManager = LinearLayoutManager(this)
+                customerListView.adapter = CustomerAdapter(customerList, this)
+            }
     }
 }

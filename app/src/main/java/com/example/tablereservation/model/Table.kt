@@ -2,7 +2,9 @@ package com.example.tablereservation.model
 
 class Table {
     companion object {
-        val TABLE_ID_KEY = "TABLE_ID"
+        const val TABLE_ID_KEY: String = "TABLE_ID"
+        const val TABLE_CUSTOMER_MAX: Int = 5
+        const val ALL_TABLE_CUSTOMER_MAX: Int = 20
     }
 
     var id: Int? = 0

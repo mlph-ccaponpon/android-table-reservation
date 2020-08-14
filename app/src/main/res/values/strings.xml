@@ -3,11 +3,20 @@
     <string name="app_name">Table Reservation</string>
     <string name="table_id">Table %d</string>
     <string name="clear_tables">Clear Tables</string>
+    <string name="clear_tables_msg">Are you sure you want to clear tables?</string>
+    <string name="clear_tables_yes">Yes</string>
+    <string name="clear_tables_no">No</string>
+    <string name="clear_tables_success">Successfully clear tables</string>
+    <string name="all_table_full">Sorry, all tables are already full</string>
 
     <!-- Add Customer Activity -->
     <string name="add_customer">Add Customer</string>
     <string name="customer_name">Name</string>
     <string name="customer_table">Table</string>
     <string name="submit">Submit</string>
+    <string name="add_customer_success">Successfully added customer! Table has been occupied by %d pax</string>
+    <string name="add_customer_table_full">Sorry, this table is already full</string>
+    <string name="add_customer_name_req">Customer Name is required</string>
+
 
 </resources>
