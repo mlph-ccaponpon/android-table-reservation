@@ -4,6 +4,9 @@ import android.annotation.SuppressLint
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
+import android.widget.LinearLayout
+import android.widget.TextView
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.tablereservation.R
@@ -18,7 +21,7 @@ import io.reactivex.schedulers.Schedulers
 class CustomerListActivity : AppCompatActivity() {
     private var tableId: Int = 0
     lateinit var customerListView: RecyclerView
-    private var customerList:List<String> = ArrayList()
+    lateinit var customerEmptyView: TextView
     lateinit var appDatabase: AppDatabase
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -30,6 +33,9 @@ class CustomerListActivity : AppCompatActivity() {
         supportActionBar?.title = navBarTitle
 
         appDatabase = AppDatabase.getDatabase(this)
+        customerListView = findViewById(R.id.customer_list)
+        customerListView.layoutManager = LinearLayoutManager(this)
+        customerEmptyView = findViewById(R.id.customer_empty_view)
         showCustomerListByTable()
     }
 
@@ -40,9 +46,14 @@ class CustomerListActivity : AppCompatActivity() {
         }.subscribeOn(Schedulers.io())
             .observeOn(AndroidSchedulers.mainThread())
             .subscribe{ customerList ->
-                customerListView = findViewById(R.id.customer_list)
-                customerListView.layoutManager = LinearLayoutManager(this)
-                customerListView.adapter = CustomerAdapter(customerList, this)
+                if(customerList.isNotEmpty()) {
+                    customerEmptyView.visibility = View.GONE
+                    customerListView.visibility = View.VISIBLE
+                    customerListView.adapter = CustomerAdapter(customerList, this)
+                } else {
+                    customerListView.visibility = View.GONE
+                    customerEmptyView.visibility = View.VISIBLE
+                }
             }
     }
 }

@@ -18,5 +18,7 @@
     <string name="add_customer_table_full">Sorry, this table is already full</string>
     <string name="add_customer_name_req">Customer Name is required</string>
 
+    <!-- Customer List Activity -->
+    <string name="no_customer">No Customer</string>
 
 </resources>
