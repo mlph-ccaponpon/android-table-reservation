@@ -63,7 +63,7 @@ class MainActivity : AppCompatActivity(), AdapterView.OnItemClickListener {
     }
 
     override fun onBackPressed() {
-        super.onBackPressed()
-        finish()
+        finishAffinity();
+        finish();
     }
 }
