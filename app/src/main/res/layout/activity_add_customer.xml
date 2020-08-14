@@ -7,7 +7,8 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="15dp"
-    tools:context=".activity.AddCustomerActivity">
+    tools:context=".activity.AddCustomerActivity"
+    android:background="@color/primary_bg_color">
 
     <EditText
         android:id="@+id/customer_name"
@@ -25,7 +26,8 @@
         android:layout_marginStart="5dp"
         android:layout_marginLeft="5dp"
         android:layout_marginTop="5dp"
-        android:text="@string/customer_table" />
+        android:text="@string/customer_table"
+        android:textColor="@color/colorPrimary"/>
 
     <Spinner
         android:id="@+id/table_spinner"
@@ -38,7 +40,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
-        android:text="@string/submit" />
+        android:text="@string/submit"
+        android:background="@color/colorPrimary"
+        android:textColor="@color/primary_bg_color" />
 
 
 </LinearLayout>

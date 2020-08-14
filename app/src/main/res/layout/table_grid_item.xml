@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_gravity="center|center_horizontal|center_vertical"
-    app:cardBackgroundColor="@color/colorPrimary"
+    app:cardBackgroundColor="@color/cardview_light_background"
     app:cardCornerRadius="8dp"
     app:cardElevation="5dp"
     app:cardPreventCornerOverlap="true">
@@ -24,11 +24,12 @@
             android:layout_alignLeft="@id/table_icon"
             android:layout_alignEnd="@id/table_icon"
             android:layout_alignRight="@id/table_icon"
+            android:layout_marginBottom="5dp"
             android:fontFamily="sans-serif-black"
             android:gravity="center"
             android:text="@string/table_id"
-            android:textColor="#FFFFFF"
-            android:textSize="24sp" />
+            android:textColor="@color/colorPrimary"
+            android:textSize="18sp" />
 
         <ImageView
             android:id="@+id/table_icon"

@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".activity.CustomerListActivity">
+    tools:context=".activity.CustomerListActivity"
+    android:background="@color/primary_bg_color">
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/customer_list"

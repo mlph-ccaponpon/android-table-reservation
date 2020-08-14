@@ -5,7 +5,7 @@
     android:id="@+id/main_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FFFFFF"
+    android:background="@color/primary_bg_color"
     android:orientation="vertical"
     android:padding="10dp"
     tools:context=".activity.MainActivity">
@@ -18,27 +18,37 @@
         android:columnWidth="150dp"
         android:horizontalSpacing="15dp"
         android:numColumns="auto_fit"
-        android:verticalSpacing="15dp">
+        android:verticalSpacing="15dp"
+        android:layout_marginTop="10dp">
 
     </GridView>
 
     <LinearLayout
+        android:id="@+id/option_layout"
+        style="?android:attr/buttonBarStyle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
 
         <Button
             android:id="@+id/add_customer"
+            style="?android:attr/buttonBarButtonStyle"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="@string/add_customer"/>
+            android:background="@color/colorPrimary"
+            android:textColor="@color/primary_bg_color"
+            android:text="@string/add_customer" />
 
         <Button
             android:id="@+id/clear_tables"
+            style="?android:attr/buttonBarButtonStyle"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
             android:layout_weight="1"
+            android:background="@color/colorPrimary"
+            android:textColor="@color/primary_bg_color"
             android:text="@string/clear_tables"/>
     </LinearLayout>
 
