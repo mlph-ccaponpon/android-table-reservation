@@ -61,4 +61,9 @@ class MainActivity : AppCompatActivity(), AdapterView.OnItemClickListener {
             startActivity(addCustomerIntent)
         })
     }
+
+    override fun onBackPressed() {
+        super.onBackPressed()
+        finish()
+    }
 }

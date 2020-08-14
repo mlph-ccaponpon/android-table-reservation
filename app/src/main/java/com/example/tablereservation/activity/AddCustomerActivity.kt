@@ -3,7 +3,6 @@ package com.example.tablereservation.activity
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import android.view.View
 import android.widget.*
 import com.example.tablereservation.R
