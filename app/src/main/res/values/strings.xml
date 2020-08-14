@@ -1,6 +1,13 @@
 <resources>
+    <!-- Main Activity -->
     <string name="app_name">Table Reservation</string>
     <string name="table_id">Table %d</string>
-    <string name="add_customer">Add Customer</string>
     <string name="clear_tables">Clear Tables</string>
+
+    <!-- Add Customer Activity -->
+    <string name="add_customer">Add Customer</string>
+    <string name="customer_name">Name</string>
+    <string name="customer_table">Table</string>
+    <string name="submit">Submit</string>
+
 </resources>
