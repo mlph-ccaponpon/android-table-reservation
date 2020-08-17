@@ -29,7 +29,6 @@ class AddCustomerActivity : AppCompatActivity() {
     lateinit var appDatabase: AppDatabase
 
     private var tableCustomerCount: Int = 0
-    private var isSubmitted: Boolean = false
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -83,7 +82,6 @@ class AddCustomerActivity : AppCompatActivity() {
     private fun initSubmitButton(){
         submitButton = findViewById(R.id.add_customer_submit)
         submitButton.setOnClickListener(View.OnClickListener {
-            isSubmitted = true
             closeKeyBoard()
             validateAddCustomerForm()
         })
@@ -99,16 +97,21 @@ class AddCustomerActivity : AppCompatActivity() {
 
     @SuppressLint("CheckResult")
     private fun validateAddCustomerForm() {
-        validateCustomerName()
-        validateTable(true)
+        var isValid = validateCustomerName()
+        validateTable(isValid)
     }
 
-    private fun validateCustomerName() {
+    private fun validateCustomerName() : Boolean {
+        var isValid = true
+
         if(customerName.text.isNullOrBlank()) {
             customerNameInputLayout.error = getString(R.string.add_customer_name_req)
+            isValid = false
         } else {
             customerNameInputLayout.isErrorEnabled = false
         }
+
+        return isValid
     }
 
     @SuppressLint("CheckResult")
