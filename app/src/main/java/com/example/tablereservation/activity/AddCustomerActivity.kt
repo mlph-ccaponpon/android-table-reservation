@@ -33,7 +33,9 @@ class AddCustomerActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_add_customer)
-        supportActionBar?.title = getString(R.string.add_customer)
+        supportActionBar?.title = getString(R.string.add_customer_title)
+        supportActionBar?.setDisplayShowHomeEnabled(true)
+        supportActionBar?.setIcon(R.mipmap.ic_launcher_round)
 
         appDatabase = AppDatabase.getDatabase(this)
         initAddCustomerForm()

@@ -29,8 +29,10 @@ class CustomerListActivity : AppCompatActivity() {
         setContentView(R.layout.activity_customer_list)
 
         tableId = intent.getIntExtra(Table.TABLE_ID_KEY, 0)
-        val navBarTitle = getString(R.string.table_id, tableId)
+        val navBarTitle = getString(R.string.customer_list_title, tableId)
         supportActionBar?.title = navBarTitle
+        supportActionBar?.setDisplayShowHomeEnabled(true)
+        supportActionBar?.setIcon(R.mipmap.ic_launcher_round)
 
         appDatabase = AppDatabase.getDatabase(this)
         customerListView = findViewById(R.id.customer_list)

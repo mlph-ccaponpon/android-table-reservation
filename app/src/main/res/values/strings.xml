@@ -1,6 +1,7 @@
 <resources>
     <!-- Main Activity -->
-    <string name="app_name">Chin\'s Kitchen</string>
+    <string name="app_name">\tChin\'s Kitchen</string>
+    <string name="customer_list_title">\tTable %d</string>
     <string name="table_id">Table %d</string>
     <string name="clear_tables">Clear Tables</string>
     <string name="clear_tables_msg">Are you sure you want to clear tables?</string>
@@ -10,6 +11,7 @@
     <string name="all_table_full">Sorry, all tables are already full</string>
 
     <!-- Add Customer Activity -->
+    <string name="add_customer_title">\tAdd Customer</string>
     <string name="add_customer">Add Customer</string>
     <string name="customer_name">Name</string>
     <string name="customer_table">Table</string>

@@ -9,11 +9,11 @@
         android:id="@+id/customer_name"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:drawablePadding="20dp"
+        android:drawablePadding="15dp"
         android:fontFamily="sans-serif-light"
         android:padding="20dp"
         android:text="@string/customer_name"
-        android:textColor="@color/colorPrimary"
+        android:textColor="@color/primary_color"
         android:textSize="18sp"
         app:drawableLeftCompat="@drawable/ic_customer"
         android:background="@drawable/customer_list_border"/>
