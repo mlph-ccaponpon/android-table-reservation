@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/customer_item_layout"
+    xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/customer_item_layout"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical">
@@ -9,6 +9,18 @@
         android:id="@+id/customer_name"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:drawablePadding="20dp"
+        android:fontFamily="sans-serif-light"
+        android:padding="20dp"
         android:text="@string/customer_name"
-        android:padding="20dp"/>
+        android:textColor="@color/colorPrimary"
+        android:textSize="18sp"
+        app:drawableLeftCompat="@drawable/ic_customer" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.2dp"
+        android:id="@+id/separator"
+        android:visibility="visible"
+        android:background="@android:color/darker_gray"/>
 </LinearLayout>
