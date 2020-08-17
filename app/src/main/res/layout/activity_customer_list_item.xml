@@ -15,12 +15,6 @@
         android:text="@string/customer_name"
         android:textColor="@color/colorPrimary"
         android:textSize="18sp"
-        app:drawableLeftCompat="@drawable/ic_customer" />
-
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="0.2dp"
-        android:id="@+id/separator"
-        android:visibility="visible"
-        android:background="@android:color/darker_gray"/>
+        app:drawableLeftCompat="@drawable/ic_customer"
+        android:background="@drawable/customer_list_border"/>
 </LinearLayout>
