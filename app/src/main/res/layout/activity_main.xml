@@ -41,7 +41,6 @@
             android:paddingBottom="10dp"
             android:text="@string/add_customer"
             android:textColor="@color/primary_bg_color"
-            android:textSize="14sp"
             app:icon="@drawable/ic_add_customer"
             app:iconGravity="textStart"
             app:iconTint="@android:color/holo_green_light" />

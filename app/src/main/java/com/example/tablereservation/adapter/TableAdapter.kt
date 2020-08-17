@@ -11,7 +11,7 @@ import com.example.tablereservation.model.Table
 
 class TableAdapter(var context: Context, var tableList: ArrayList<Table>) : BaseAdapter() {
     override fun getView(position: Int, view: View?, viewGroup: ViewGroup?): View {
-        var tableView = View.inflate(context, R.layout.table_grid_item, null)
+        var tableView = View.inflate(context, R.layout.activity_main_grid_item, null)
         var tableId: TextView = tableView.findViewById(R.id.table_id)
         var tableIcon: ImageView = tableView.findViewById(R.id.table_icon)
         var table: Table = tableList[position]

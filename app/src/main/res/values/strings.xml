@@ -17,6 +17,7 @@
     <string name="add_customer_success">Successfully added customer! Table has been occupied by %d pax</string>
     <string name="add_customer_table_full">Sorry, this table is already full</string>
     <string name="add_customer_name_req">Customer Name is required</string>
+    <string name="add_customer_table_req">Table is required</string>
 
     <!-- Customer List Activity -->
     <string name="no_customer">No Customer</string>

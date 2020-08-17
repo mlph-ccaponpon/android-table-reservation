@@ -7,7 +7,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.tablereservation.R
 import com.example.tablereservation.model.Customer
-import kotlinx.android.synthetic.main.customer_list_item.view.*
+import kotlinx.android.synthetic.main.activity_customer_list_item.view.*
 
 class CustomerAdapter(customerList: List<Customer>, context: Context) : RecyclerView.Adapter<CustomerAdapter.ViewHolder> () {
     var customerList = customerList
@@ -18,7 +18,7 @@ class CustomerAdapter(customerList: List<Customer>, context: Context) : Recycler
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        return ViewHolder(LayoutInflater.from(context).inflate(R.layout.customer_list_item,parent,false))
+        return ViewHolder(LayoutInflater.from(context).inflate(R.layout.activity_customer_list_item,parent,false))
     }
 
     override fun getItemCount(): Int {
