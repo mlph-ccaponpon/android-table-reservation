@@ -1,6 +1,6 @@
 <resources>
     <!-- Main Activity -->
-    <string name="app_name">Table Reservation</string>
+    <string name="app_name">Chin\'s Kitchen</string>
     <string name="table_id">Table %d</string>
     <string name="clear_tables">Clear Tables</string>
     <string name="clear_tables_msg">Are you sure you want to clear tables?</string>

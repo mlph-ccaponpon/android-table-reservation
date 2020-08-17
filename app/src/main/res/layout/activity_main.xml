@@ -14,44 +14,57 @@
         android:id="@+id/table_grid_view"
         android:layout_width="match_parent"
         android:layout_height="0dp"
+        android:layout_marginTop="10dp"
         android:layout_weight="1"
         android:columnWidth="150dp"
         android:horizontalSpacing="15dp"
         android:numColumns="auto_fit"
-        android:verticalSpacing="15dp"
-        android:layout_marginTop="10dp">
+        android:verticalSpacing="15dp">
 
     </GridView>
 
     <LinearLayout
         android:id="@+id/option_layout"
-        style="?android:attr/buttonBarStyle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/add_customer"
-            style="?android:attr/buttonBarButtonStyle"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_gravity="center"
             android:layout_weight="1"
-            android:background="@color/colorPrimary"
+            android:paddingLeft="5dp"
+            android:paddingTop="10dp"
+            android:paddingRight="5dp"
+            android:paddingBottom="10dp"
+            android:text="@string/add_customer"
             android:textColor="@color/primary_bg_color"
-            android:text="@string/add_customer" />
+            android:textSize="14sp"
+            app:icon="@drawable/ic_add_customer"
+            app:iconGravity="textStart"
+            app:iconTint="@android:color/holo_green_light" />
 
-        <Button
+
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/clear_tables"
-            style="?android:attr/buttonBarButtonStyle"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
+            android:layout_gravity="center"
+            android:layout_marginStart="5dp"
+            android:layout_marginLeft="5dp"
             android:layout_weight="1"
-            android:background="@color/colorPrimary"
+            android:paddingLeft="5dp"
+            android:paddingTop="10dp"
+            android:paddingRight="5dp"
+            android:paddingBottom="10dp"
+            android:text="@string/clear_tables"
             android:textColor="@color/primary_bg_color"
-            android:text="@string/clear_tables"/>
+            app:icon="@drawable/ic_clear_tables"
+            app:iconGravity="textStart"
+            app:iconTint="@android:color/holo_red_light" />
     </LinearLayout>
-
 
 
 </LinearLayout>
