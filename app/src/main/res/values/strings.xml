@@ -1,6 +1,6 @@
 <resources>
     <!-- Main Activity -->
-    <string name="app_name">\tChin\'s Kitchen</string>
+    <string name="app_name">\tChin\'s  Kitchen</string>
     <string name="customer_list_title">\tTable %d</string>
     <string name="table_id">Table %d</string>
     <string name="clear_tables">Clear Tables</string>
